@@ -1,0 +1,67 @@
+<!-- Correos template -->
+<script id="correos-template" type="text/x-handlebars-template">
+    <div class="row correos-h">
+        <div class="col-md-12">
+            <h2 class="label-danger clearfix">
+                <span>Correos Express:</span>
+                <a href="\{{ trackerWebsite }}" target="_blank">
+                    <i class="fa fa-external-link"></i>
+                </a>
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered break-strong">
+                <tr>
+                    <td style="width: 40%">
+                        <strong>Estado:</strong> \{{HelperCapitalize state }}
+                    </td>
+                    <td>
+                        \{{#if deliveryDate }}
+                        <strong>Data prevista de entrega:</strong> \{{HelperDate deliveryDate }}
+                        \{{else}}
+                        <strong>Descrição:</strong> \{{HelperCapitalize state2 }}
+                        \{{/if}}
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Orígem:</strong> \{{HelperCapitalize origin }}
+                    </td>
+                    <td>
+                        <strong>Destino:</strong> \{{HelperCapitalizeWords destiny }}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <h3><span class="label label-default">Estados:</span></h3>
+
+            <div class="result-details">
+                <dl class="des-block">
+
+                    \{{#each states as |item|}}
+                    <dd class="\{{HelperState item.state @first}}"><i></i>
+                        <div class="track-news clearfix">
+                                <span class="date" data-toggle="tooltip" data-placement="top" title="\{{HelperDateWithHours item.date }}">
+                                   \{{HelperFromNow item.date }}
+                                </span>
+                            <p><strong>\{{HelperCapitalize item.state }}</strong> <span class="area-break">\{{HelperCapitalizeWords item.area }}</span></p>
+                        </div>
+                    </dd>
+                    \{{/each}}
+                </dl>
+            </div>
+
+        </div>
+    </div>
+
+</script>
+<!-- /Correos template -->

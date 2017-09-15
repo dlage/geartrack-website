@@ -3,3 +3,15 @@ node_modules
 
 ### Jetbrains
 .idea
+
+### Certificates
+.well-known
+
+### VS Code
+.vscode/*
+
+### PM2 configuration file
+gear.json
+
+### NPM Lock file (having some problems when updating on production server)
+package-lock.json

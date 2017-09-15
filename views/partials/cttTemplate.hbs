@@ -1,0 +1,46 @@
+<script id="ctt-template" type="text/x-handlebars-template">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="label-\{{ color }} clearfix">
+                <span>\{{ provider }}:</span>
+                <a href="\{{ trackerWebsite }}" target="_blank">
+                    <i class="fa fa-external-link"></i>
+                </a>
+            </h2>
+
+            <table class="table table-bordered break-strong">
+                <tr>
+                    <td>
+                        <strong>Último Estado:</strong> \{{ state.status }}
+                    </td>
+                    <td>
+                        <strong>Data:</strong> \{{HelperDate state.date }} (\{{HelperFromNow state.date }})
+                    </td>
+                </tr>
+            </table>
+
+            <h3><span class="label label-default">Mensagens:</span></h3>
+            <div class="result-details">
+                <dl class="des-block">
+
+                    \{{#each messages as |message|}}
+
+                    \{{#each message.status as |status|}}
+                    <dd class="\{{HelperState status.status @../first @first}}"><i></i>
+                        <div class="track-news clearfix">
+                            <span class="date" data-toggle="tooltip" data-placement="top" title="\{{HelperDateWithHours status.time }}">
+                                   \{{HelperFromNow status.time }}
+                                </span>
+                            <p><strong>\{{HelperCapitalizeWords status.status }}</strong> <span class="area-break">\{{HelperCapitalizeWords status.local }}</span></p>
+                        </div>
+                    </dd>
+                    \{{/each}}
+
+                    \{{/each}}
+
+                </dl>
+            </div>
+        </div>
+    </div>
+    </div>
+</script>

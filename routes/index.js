@@ -5,7 +5,7 @@ const router = express.Router();
  * Home page
  */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Início' });
+  res.render('index');
 });
 
 /**
@@ -19,7 +19,7 @@ router.get('/about', function(req, res, next) {
  * News
  */
 router.get('/news', function(req, res, next) {
-    res.render('news', { title: 'Noticias' });
+    res.render('news', { title: 'Notícias' });
 });
 
 /**

@@ -1,5 +1,18 @@
 body {
     padding-top: 70px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mr10 {
+    margin-right: 10px;
 }
 
 .track-entries {
@@ -7,12 +20,16 @@ body {
     line-height: 14px;
 }
 
-.track-entries h4{
+.track-entries h4 {
     padding: 0;
     margin: 0 0 2px 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.label-yellow {
+    background-color: #f1af00;
 }
 
 .track-entries p {
@@ -45,7 +62,27 @@ body {
 
 .track h2 {
     margin: 5px 0 10px 0;
-    font-size: 25px;
+    font-size: 18.75px;
+    color: #ffffff;
+    padding: 0 12px !important;
+    line-height: 35px;
+    border-radius: .25em;
+}
+
+.track h2 a {
+    float: right;
+    color: white;
+    font-size: 15px;
+    line-height: 35px;
+}
+
+.track h2 a:hover,
+.track h2 a:focus{
+    outline: none;
+}
+
+.track h2 span {
+    text-align: left;
 }
 
 .track h3 {
@@ -81,8 +118,7 @@ body {
 /* FAQs
    ========================================================================== */
 #accordion a:hover,
-#accordion a:focus
-{
+#accordion a:focus {
     text-decoration: none;
 }
 
@@ -114,4 +150,153 @@ body {
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
     color: #454444;
+}
+
+#help_block {
+    display: none;
+}
+
+
+.central-text {
+    font-size: 13px;
+}
+
+.help-cursor, [data-toggle="tooltip"] {
+    cursor: help;
+}
+
+/* Timeline
+   ========================================================================== */
+.result-details dt {
+    padding: 10px 0 10px;
+}
+
+.result-details dd.new {
+    color: #ff851b;
+}
+
+.result-details dd.new i {
+    border-color: #ff851b;
+    background: #ff851b;
+}
+
+.result-details dd.delivered {
+    color: #309c40;
+}
+
+.result-details dd.delivered i {
+    border-color: #309c40;
+    background: #309c40;
+}
+
+.result-details dd:first-child {
+    background-position: 0 10px !important;
+    background-repeat: no-repeat !important;
+}
+
+.result-details dd {
+    position: relative;
+    margin-left: 10px;
+    background: url('/img/timeline_line.png') left repeat-y;
+}
+
+.result-details dd i {
+    display: inline-block;
+    float: left;
+    margin: 10px 0 0 -3px;
+    width: 7px;
+    height: 7px;
+    line-height: 16px;
+    border-radius: 50%;
+    border: 2px solid #e0e0e0;
+    background: #e0e0e0;
+}
+
+.result-details i {
+    font-style: normal;
+}
+
+.result-details dd .track-news {
+    position: relative;
+    margin-right: 0;
+    padding: 0 !important;
+    background: 0;
+}
+
+.result-details dd span.date {
+    position: absolute;
+    width: 105px;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0 !important;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: bold;
+    cursor: help;
+}
+
+.result-details dd table {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.result-details dd table td {
+    height: 25px;
+    line-height: 25px;
+}
+
+
+.result-details dd table td.date {
+    width: 120px;
+    font-weight: bold;
+}
+
+.result-details dd table td.area {
+    width: 200px;
+}
+
+.result-details dd .track-news p {
+    margin-left: 110px;
+    line-height: 25px;
+}
+
+.result-details dd:last-child {
+    background-position: 0 -190px;
+    background-repeat: no-repeat;
+}
+
+.result-details dd:only-child {
+    background: none !important;
+}
+
+.area-break:before {
+    content: " - ";
+}
+
+@media (max-width: 768px) {
+    .area-break:before {
+        content: "";
+    }
+
+    .area-break {
+        font-size: 13px;
+        line-height: 13px;
+        display: block;
+    }
+
+    .break-strong strong {
+        display: block;
+    }
+}
+
+/* Fixes cross browser support
+   ========================================================================== */
+body:last-child abbr[title], x:-moz-any-link {
+    cursor: help;
+    border-bottom: none !important;
+}
+
+.central-text {
+    font-size: 13px;
 }

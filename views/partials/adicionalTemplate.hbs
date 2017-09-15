@@ -1,0 +1,53 @@
+
+<!-- Adicional template -->
+<script id="adicional-template" type="text/x-handlebars-template">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="label-success clearfix">
+                <span>Adicional:</span>
+                <a href="\{{ trackerWebsite }}" target="_blank">
+                    <i class="fa fa-external-link"></i>
+                </a>
+            </h2>
+        </div>
+    </div>
+
+    <div class="row break-strong">
+        <div class="col-xs-6">
+            <strong>Estado:</strong> \{{HelperCapitalizeWords status }}
+            \{{#if sub_status}}
+            <strong>Sub Estado:</strong> \{{HelperCapitalizeWords sub_status }}
+            \{{/if}}
+        </div>
+        <div class="col-xs-6 text-right">
+            <strong>Ultima atualização:</strong> \{{HelperDateWithHours updated }} (\{{HelperFromNow updated }})
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+                <table class="table table-bordered break-strong">
+                    <tr>
+                        <td>
+                            <strong>Tipo Serviço:</strong> \{{HelperCapitalizeWords service_type }}
+                        </td>
+                        <td>
+                            <strong>Destinatário:</strong> \{{HelperCapitalizeWords name }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Distribuidor:</strong> \{{ distributor }}
+                        </td>
+                        <td>
+                            <strong>Telemovel:</strong> \{{ phone1 }}
+                            \{{#if phone2}}
+                            (\{{ phone2 }})
+                            \{{/if}}
+                        </td>
+                    </tr>
+                </table>
+        </div>
+    </div>
+</script>
+<!-- /Adicional template -->
